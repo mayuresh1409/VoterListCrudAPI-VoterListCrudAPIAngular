@@ -1,0 +1,27 @@
+<div class="container my-5">
+    <h3 class="mb-3">Edit Employee</h3>
+    <div class="row">
+        <div class="col-4">
+            <form #form="ngForm" (ngSubmit)="updateVoter()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" readonly name="id" [(ngModel)]="voterDetails.id">
+                  </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="voterDetails.name">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Id</label>
+                  <input type="text" class="form-control" id="email" name="email" [(ngModel)]="voterDetails.email">
+                </div>
+                <div class="mb-3">
+                  <label for="phoneNumber" class="form-label">Phone Number</label>
+                  <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="voterDetails.phoneNumber">
+                </div>
+                <button type="submit" class="btn btn-success">Save</button>&nbsp;
+                <button type="submit" class="btn btn-danger" (click)="deleteVoter(voterDetails.id)">Delete</button>
+              </form>
+        </div>
+    </div>
+</div>

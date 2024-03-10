@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { VotersListComponent } from './components/voters/voters-list/voters-list.component';
+import { AppComponent } from './app.component';
+import { AddVoterComponent } from './components/voters/add-voter/add-voter.component';
+import { EditVoterComponent } from './components/voters/edit-voter/edit-voter.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path : 'voters',
+    component : VotersListComponent
+  },
+  {
+    path : 'voters/add',
+    component : AddVoterComponent
+  },
+  {
+    path : 'voters/edit/:id',
+    component : EditVoterComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

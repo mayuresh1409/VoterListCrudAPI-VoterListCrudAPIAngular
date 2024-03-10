@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <h3 class="mb-3">VOTERS</h3>
+
+    <table class="table table-striped" *ngIf="voters && voters.length >0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let voter of voters">
+                <td>{{voter.id}}</td>
+                <td>{{voter.name}}</td>
+                <td>{{voter.email}}</td>
+                <td>{{voter.phoneNumber}}</td>
+                <td>
+                    <a [routerLink]="['/voters', 'edit', voter.id]">
+                        <button type="button" class="btn btn-outline-dark">Edit</button>
+                    </a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p *ngIf="!voters || voters.length <=0">No Voters Found!</p>
+</div>
