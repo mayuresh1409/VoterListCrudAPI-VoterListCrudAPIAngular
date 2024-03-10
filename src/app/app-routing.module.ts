@@ -4,8 +4,13 @@ import { VotersListComponent } from './components/voters/voters-list/voters-list
 import { AppComponent } from './app.component';
 import { AddVoterComponent } from './components/voters/add-voter/add-voter.component';
 import { EditVoterComponent } from './components/voters/edit-voter/edit-voter.component';
+import { WelcomeComponent } from './home/welcome/welcome.component';
 
 const routes: Routes = [
+  {
+    path : 'welcome',
+    component : WelcomeComponent
+  },
   {
     path : 'voters',
     component : VotersListComponent

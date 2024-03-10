@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddVoterComponent } from './components/voters/add-voter/add-voter.component';
 import { FormsModule } from '@angular/forms';
 import { EditVoterComponent } from './components/voters/edit-voter/edit-voter.component';
+import { WelcomeComponent } from './home/welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VotersListComponent,
     AddVoterComponent,
-    EditVoterComponent
+    EditVoterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
